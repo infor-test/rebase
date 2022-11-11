@@ -28,6 +28,7 @@ options {
 		stage('Example') {
                     steps {
                         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+			    echo "My job name is ${env.JOB_NAME}"
             }
           }
 	}
