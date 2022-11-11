@@ -6,7 +6,7 @@ options {
     buildDiscarder(logRotator(numToKeepStr: '4'))
   }
 environment {
-  kishore = "devops-${BUILD_NUMBER}"
+  kishore = "*********************-${BUILD_NUMBER}************************"
   BUILD_VERSION = "MXL-${BUILD_NUMBER}"
   }
 	
