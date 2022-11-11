@@ -5,8 +5,19 @@ options {
 //timestamps()
     buildDiscarder(logRotator(numToKeepStr: '4'))
   }
+environment {
+  kishore = "devops-${BUILD_NUMBER}"
+  BUILD_VERSION = "MXL-${BUILD_NUMBER}"
+  }
 	
 	stages {
+		 stage('Build name') {
+                    steps {
+                        script {
+                         currentBuild.displayName = env.kishore
+                       }
+		    }
+		}
 	    stage ('1') {
 		   steps {
 		      git credentialsId: '3d544f37-c71f-4f0f-9e84-c60e24f53cce', url: 'https://github.com/infor-test/demo.git'
