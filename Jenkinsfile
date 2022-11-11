@@ -29,6 +29,13 @@ options {
                     steps {
                         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 			    echo "My job name is ${env.JOB_NAME}"
+			    echo "++++++++++++++++-${env.BUILD_TAG}"
+			    echo ">>>>>>>>>>>>>>>>-${env.BUILD_URL}"
+			    echo "#################-${env.EXECUTOR_NUMBER}"
+			    echo "@@@@@@@@@@@@@@@@@-${env.JAVA_HOME}"
+			    echo "!!!!!!!!!!!!!!!!!-${env.NODE_NAME}"
+			    echo "&&&&&&&&&&&&&&&&&&-${env.NODE_NAME}"
+			    
             }
           }
 	}
