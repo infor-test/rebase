@@ -1,6 +1,10 @@
 pipeline {
     agent { label 'demo'
 	}
+options {
+//timestamps()
+    buildDiscarder(logRotator(numToKeepStr: '4'))
+  }
 	
 	stages {
 	    stage ('1') {
