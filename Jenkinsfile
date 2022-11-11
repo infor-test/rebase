@@ -13,12 +13,12 @@ pipeline {
 			    echo "hello welcome"
 				}
 		}
-		stage ('filedownload') {
+		stage ('file-download') {
 			steps {
 				script {
 				sh 'wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz'
 					}
-					}
+			     }
 		}
 	}
 }
